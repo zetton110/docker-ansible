@@ -16,6 +16,9 @@ RUN sed -ri 's/^#?PasswordAuthentication\s+.*/PasswordAuthentication yes/' /etc/
 # 空のパスワードを許可する（テスト目的でのみ）
 RUN sed -ri 's/^#?PermitEmptyPasswords\s+.*/PermitEmptyPasswords yes/' /etc/ssh/sshd_config
 
+
+RUN sed -ri 's/^#?PubkeyAuthentication\s+.*/PubkeyAuthentication yes/' /etc/ssh/sshd_config
+
 # ルートのパスワードを "root" に設定
 RUN echo "root:root" | chpasswd
 

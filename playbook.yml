@@ -1,0 +1,5 @@
+- hosts: target
+  tasks:
+  - name: "sample task"
+    shell: |
+        touch hoge
