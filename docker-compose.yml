@@ -1,22 +1,22 @@
 version: '3'
 services:
-  ansible:
-    container_name: ansible 
-    build: docker/ansible
+  controller:
+    container_name: controller 
+    build: docker/controller
     tty: true
     working_dir: "/var/data"
     volumes:
       - .:/var/data
   
-  target01:
-    container_name: target01
-    build: docker/target
+  server01:
+    container_name: server01
+    build: docker/server
     tty: true
-  target02:
-    container_name: target02
-    build: docker/target
+  server02:
+    container_name: server02
+    build: docker/server
     tty: true
-  target03:
-    container_name: target03
-    build: docker/target
+  server03:
+    container_name: server03
+    build: docker/server
     tty: true
